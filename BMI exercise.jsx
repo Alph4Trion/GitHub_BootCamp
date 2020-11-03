@@ -21,6 +21,6 @@ function bmi(ht, wg) {
 }
 
 //function call
-document.write(bmi(170, 70));
+document.write(bmi(1.70, 70));
 
 </script>
