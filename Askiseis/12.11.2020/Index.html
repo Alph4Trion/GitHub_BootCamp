@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Πληκτρολογηστε εναν αριθμο</h2>
+    <input type="text" name="" id="input">
+    <button type="button" onclick="clickToSeeTheResult()">Click me</button>
+    <p id="yourError"></p>
+<script>
+    function clickToSeeTheResult(){
+        let message = document.getElementById("yourError");
+        message.innerHTML = "";
+
+        let x = document.getElementById("input").value;
+        try
+        {
+        if(x < 18) throw "get the fuck out of here"
+        if(x > 66) throw "you are too old for that shit"
+        if(isNaN(x)) throw "you are surely retarded"
+        if(x == "") throw "what a dipshit"
+        }
+        catch(err){
+        document.getElementById("yourError").innerHTML = "i will say it now..."+ err;
+        }  
+    }
+</script>
+
+</body>
+</html>
