@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+        <li>DDD</li>
+        <li>EEE</li>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul');
+
+        ul.children[1].style.color = 'red';
+
+        const li = document.createElement('li');
+        li.textContent = 'fff';
+        ul.insertBefore(li, ul.children[4]);
+    </script>
+
+    <script>
+        function tableCreate() {
+            let body = document.getElementsByTagName('body')[0];
+            let table = document.createElement('table');
+            table.style.width = '25%';
+            table.setAttribute('border', '1');
+            let tbody = document.createElement('tbody');
+            for (let i = 0; i < 3; i++) {
+                var tr = document.createElement('tr');
+                for (let x = 0; x < 2; x++) {
+                if (i == 2 && x == 1) {
+                    break
+            } 
+        else {
+            let td = document.createElement('td');
+            td.appendChild(document.createTextNode(''))
+            i == 1 && x == 1 ? td.setAttribute('rowSpan', '2') : null;
+            tr.appendChild(td)
+            }
+        }
+        tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    body.appendChild(table)
+}
+tableCreate();
+    </script>
+</body>
+</html>
