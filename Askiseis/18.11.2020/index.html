@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="changeColor">Hello there</h1>
+    <button id="toggle">OF</button>
+
+    <h3>Form: Exercise #3</h3>
+    <form name="myMailform" method="POST" action="#" onsubmit="return ValidateEmail();">
+    <label for="form3">Your email</label>
+    <input type="text" name="email">
+    <input type="submit" value="register">
+    </form>
+</body>
+
+<script>
+
+    function ValidateEmail(){
+        const dataInput = document.myMailform.email.value;
+        const atPosition = dataInput.indexOf("@");
+        const dotPosition = dataInput.lastIndexOf(".");
+        if (atPosition < 2|| dotPosition < atPosition +2 || dotPosition + 2>=dataInput.length){
+            alert("Please enter a valid e-mail address");
+            return false;
+        }
+    }
+ 
+
+    var  toggle = document.getElementById("toggle");
+    function toggleButton(){
+        if (toggle.innerText = "OFF"){
+            toggle.innerText = "ON";
+        }else {
+            toggle.innerText = "OFF";
+           
+        }
+    }
+
+    toggle.addEventListener("click",toggleButton);
+  
+
+    const h1 = document.querySelector('h1')
+    const colors = ['red', 'blue', 'green'];
+
+    function getRandomNum(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    h1.addEventListener('mouseover', function(){
+    h1.style.color = colors[getRandomNum(3)];
+    })
+</script>
+</html>
