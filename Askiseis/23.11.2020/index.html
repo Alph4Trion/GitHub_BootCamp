@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">In a short while i will gett bigger with JQuery</h1>
+    <a href="http://jquery.com/">jQuery</a>
+    <blockquote>Ola einai psema</blockquote>
+    <p class="uno"></p>
+    
+    <script src="Jquery-3.5.1.js"> </script>
+    
+    <script>
+        $(document).ready(function() {
+            $("a").click(function(event) {
+                alert("As you can see the link no longer redirect you to jquery.com!");
+                event.preventDefault();
+        });
+        });
+
+    </script>
+    
+</body>
+</html>
